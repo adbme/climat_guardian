@@ -57,7 +57,10 @@ export default function EspLinksElement() {
           Prefer: "return=representation",
           Authorization: `Bearer ${getToken()}`,
         },
-        body: JSON.stringify(newLink),
+        body: JSON.stringify({
+          ...newLink,
+          ip: newLink.ip, // Send IP as a string
+        }),
       });
 
       if (!response.ok) {
@@ -66,8 +69,8 @@ export default function EspLinksElement() {
 
       const responseData = await response.json();
       const newLinks = Array.isArray(responseData)
-        ? responseData.flat()
-        : [responseData];
+          ? responseData.flat()
+          : [responseData];
 
       setAllLinks([...allLinks, ...newLinks]);
       setNewLink({ name: "", ip: "" });

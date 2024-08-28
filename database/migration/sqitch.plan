@@ -9,3 +9,4 @@ user 2024-06-07T20:47:39Z Nils <nils@fedora> # create a user table to store ever
 esp 2024-06-26T08:20:01Z dylan <dylanbossoku@dylan> # create a esp table to stove every esp data
 2024-07-05 2024-07-05T08:58:10Z Nils <nils@fedora> # Grant user the ability to remove users
 2024-07-10 2024-07-10T08:08:27Z Nils <nils@fedora> # Give the esp permission to know it's id
+change-ip-column-type 2024-08-27T14:58:56Z adBME <adbme@fedora> # Use inet type to store ips for esp23
